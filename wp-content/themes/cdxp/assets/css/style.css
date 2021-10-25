@@ -45,9 +45,30 @@ header .navbar-nav ul {
 .footer{
     background-color: #012638;
 }
+.footer-main{
+    padding: 15px 0px;
+}
+.footer-main .widget-title{
+    color: #fff;
+    font-size: 20px;
+}
+.footer-main .menu{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-main .menu li a{
+    color: #fff;
+    text-decoration: none;
+}
+.footer p{
+    color: #fff;
+}
+.footer .footer-widget-wrapper p{
+    text-align: justify;
+}
 .footer .copyright p{
     text-align: center;
-    color: #fff;
     font-size: 14px;
     padding: 5px 0px;
 }
