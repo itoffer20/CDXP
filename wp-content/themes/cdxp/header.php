@@ -27,7 +27,7 @@
 	<div id="page" class="site">
 		<header id="masthead" class="site-header">
 		<nav class="navbar navbar-expand-lg">
-         <div class="container">
+         <!-- <div class="container"> -->
             <a class="navbar-brand" href="<?php echo get_site_url(); ?>">
                <img alt="Logo" src="<?php
                                     $custom_logo_id = get_theme_mod('custom_logo');
@@ -42,6 +42,6 @@
             <div class="collapse navbar-collapse" id="mainNav">
                <?php wp_nav_menu(array('theme_location' => 'primary-menu', 'container' => false, 'menu_class' => 'menu navbar-nav ml-auto primary-menu')); ?>
             </div>
-         </div>
+         <!-- </div> -->
       </nav>
 		</header><!-- #masthead -->

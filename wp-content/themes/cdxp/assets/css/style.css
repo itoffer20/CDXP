@@ -10,18 +10,42 @@ header{
 header .navbar-toggler{
     border: 1px solid #fff;
 }
-header .navbar-nav li{
-    padding: 5px 5px;
-}
-header .navbar-nav li a{
-    text-decoration: none;
+header .navbar-nav ul { 
+    list-style: none; 
+  }
+  header .navbar-nav li { 
+      margin: 0px 10px;
+      padding: 5px 0px;
+    position: relative; 
+  }
+  header .navbar-nav a {
     color: #fff;
-}
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+  }
+  header .navbar-nav a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: -4px;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  header .navbar-nav  a:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
 
-footer{
+.footer{
     background-color: #012638;
 }
-footer .copyright p{
+.footer .copyright p{
     text-align: center;
     color: #fff;
     font-size: 14px;
