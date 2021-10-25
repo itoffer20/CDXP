@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer
  *
@@ -11,24 +12,46 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'cdxp' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'cdxp' ), 'WordPress' );
+<footer id="colophon" class="site-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<?php if (is_active_sidebar('footer-col-1')) {
+					dynamic_sidebar('footer-col-1');
+				}
 				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'cdxp' ), 'cdxp', '<a href="https://itoffer.dk/">IT Offer</a>' );
+			</div>
+			<div class="col-md-3">
+				<?php if (is_active_sidebar('footer-col-2')) {
+					dynamic_sidebar('footer-col-2');
+				}
 				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+			</div>
+			<div class="col-md-3">
+				<?php if (is_active_sidebar('footer-col-3')) {
+					dynamic_sidebar('footer-col-3');
+				}
+				?>
+			</div>
+			<div class="col-md-3">
+				<?php if (is_active_sidebar('footer-col-4')) {
+					dynamic_sidebar('footer-col-4');
+				}
+				?>
+			</div>
+		</div>
+	</div>
+	<div class="copyright">
+		<?php if (is_active_sidebar('copyright')) {
+			dynamic_sidebar('copyright');
+		}
+		?>
+	</div>
+</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
 
 </body>
+
 </html>

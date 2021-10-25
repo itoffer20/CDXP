@@ -1,0 +1,29 @@
+
+
+/* Dark: #012638;
+Light: #1a3c4c;
+Green: #CCDEA4; */
+
+header{
+    background-color: #012638;
+}
+header .navbar-toggler{
+    border: 1px solid #fff;
+}
+header .navbar-nav li{
+    padding: 5px 5px;
+}
+header .navbar-nav li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+footer{
+    background-color: #012638;
+}
+footer .copyright p{
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    padding: 5px 0px;
+}

@@ -50,7 +50,7 @@ if ( ! function_exists( 'cdxp_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'cdxp' ),
+				'primary-menu' => esc_html__( 'Primary Menu', 'cdxp' ),
 			)
 		);
 
@@ -121,35 +121,12 @@ add_action( 'after_setup_theme', 'cdxp_content_width', 0 );
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function cdxp_widgets_init() {
-	register_sidebar(
-		array(
-			'name'          => esc_html__( 'Sidebar', 'cdxp' ),
-			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'cdxp' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
-	);
-}
-add_action( 'widgets_init', 'cdxp_widgets_init' );
+require get_template_directory() . '/inc/widgets.php';
 
 /**
  * Enqueue scripts and styles.
  */
-function cdxp_scripts() {
-	wp_enqueue_style( 'cdxp-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'cdxp-style', 'rtl', 'replace' );
-
-	wp_enqueue_script( 'cdxp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-}
-add_action( 'wp_enqueue_scripts', 'cdxp_scripts' );
+require get_template_directory() . '/inc/assets.php';
 
 /**
  * Implement the Custom Header feature.
@@ -177,4 +154,14 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * Custom post Types.
+ */
+require get_template_directory() . '/inc/post-types.php';
+
+/**
+ * ACF Theme Options.
+ */
+require get_template_directory() . '/inc/options.php';
 
