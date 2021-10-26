@@ -26,6 +26,7 @@
 	<?php wp_body_open(); ?>
 	<div id="page" class="site">
 		<header id="masthead" class="site-header">
+        
 		<nav class="navbar navbar-expand-lg">
          <!-- <div class="container"> -->
             <a class="navbar-brand" href="<?php echo get_site_url(); ?>">
@@ -44,4 +45,7 @@
             </div>
          <!-- </div> -->
       </nav>
+      <div class="seomondo-logo">
+         <?php echo do_shortcode("[hfe_template id='120']"); ?>
+         </div>
 		</header><!-- #masthead -->

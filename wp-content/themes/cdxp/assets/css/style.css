@@ -4,28 +4,33 @@
 Light: #1a3c4c;
 Green: #CCDEA4; */
 
-header{
+.page {
+    margin: 0;
+}
+
+.site-header{
     background-color: #012638;
 }
-header .navbar-toggler{
-    border: 1px solid #fff;
+.site-header .navbar-toggler{
+    border: none;
+    padding: 0;
 }
-header .navbar-nav ul { 
+.site-header .navbar-nav ul { 
     list-style: none; 
   }
-  header .navbar-nav li { 
+  .site-header .navbar-nav li { 
       margin: 0px 10px;
       padding: 5px 0px;
     position: relative; 
   }
-  header .navbar-nav a {
+  .site-header .navbar-nav a {
     color: #fff;
     text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
     position: relative;
   }
-  header .navbar-nav a:after {    
+  .site-header .navbar-nav a:after {    
     background: none repeat scroll 0 0 transparent;
     bottom: -4px;
     content: "";
@@ -37,38 +42,36 @@ header .navbar-nav ul {
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
   }
-  header .navbar-nav  a:hover:after { 
+  .site-header .navbar-nav .current-menu-item a:after{
+    width: 100%;
+  }
+  .site-header .navbar-nav  a:hover:after { 
     width: 100%; 
     left: 0; 
   }
+  .site-header .navbar-nav .salesmanago a {
+    color: #CCDEA4;
+  }
+  .site-header .navbar-nav .salesmanago a:after {    
+    background: #CCDEA4;
+  }
+.seomondo-logo{
+    position: absolute;
+    right: 3px;
+    top: -10px;
+}
+.site-header .fa-bars{
+    color: #fff;
+}
+footer .elementor-widget-container h5{
+    color: #fff;
+}
 
-.footer{
-    background-color: #012638;
+footer .menu{
+   padding: 0;
+   margin: 0;
 }
-.footer-main{
-    padding: 15px 0px;
-}
-.footer-main .widget-title{
-    color: #fff;
-    font-size: 20px;
-}
-.footer-main .menu{
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-.footer-main .menu li a{
-    color: #fff;
-    text-decoration: none;
-}
-.footer p{
-    color: #fff;
-}
-.footer .footer-widget-wrapper p{
-    text-align: justify;
-}
-.footer .copyright p{
-    text-align: center;
-    font-size: 14px;
-    padding: 5px 0px;
-}
+footer .menu li a{
+  color: #fff;
+  text-decoration: none;
+ }
